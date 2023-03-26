@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'config/theme/app_theme.dart';
+
 void main() => runApp(const MainApp());
 
 class MainApp extends StatelessWidget {
@@ -7,12 +9,16 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Widgets App',
       debugShowCheckedModeBanner: false,
+      theme: AppTheme(selectedColor: 2).getTheme(),
       home: Scaffold(
         body: Center(
-          child: Text('Hello World!'),
+          child: FilledButton(
+            onPressed: () {},
+            child: Text('Hello World!'),
+          ),
         ),
       ),
     );
