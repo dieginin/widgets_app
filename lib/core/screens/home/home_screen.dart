@@ -6,6 +6,8 @@ import '/config/menu/menu_items.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  static const name = 'home_screen';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
