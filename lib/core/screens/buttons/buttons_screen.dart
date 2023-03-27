@@ -45,10 +45,7 @@ class _ButtonView extends StatelessWidget {
             OutlinedButton.icon(onPressed: () {}, icon: const Icon(Icons.terminal), label: const Text('Ourline Icon')),
             TextButton(onPressed: () {}, child: const Text('Text')),
             TextButton.icon(onPressed: () {}, icon: const Icon(Icons.account_box_outlined), label: const Text('Text Icon')),
-
-            // TODO Custom button
             const CustomButton(),
-
             IconButton(onPressed: () {}, icon: const Icon(Icons.app_registration_rounded)),
             IconButton(
               onPressed: () {},
