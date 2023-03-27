@@ -22,10 +22,10 @@ class _HomeView extends StatelessWidget {
     return ListView.builder(
       itemCount: appMenuItems.length,
       itemBuilder: (_, i) {
-        final MenuItem appMenuItem = appMenuItems[i];
+        final MenuItem menuItem = appMenuItems[i];
 
         return _CustomListTile(
-          appMenuItem: appMenuItem,
+          menuItem: menuItem,
         );
       },
     );
@@ -34,10 +34,10 @@ class _HomeView extends StatelessWidget {
 
 class _CustomListTile extends StatelessWidget {
   const _CustomListTile({
-    required this.appMenuItem,
+    required this.menuItem,
   });
 
-  final MenuItem appMenuItem;
+  final MenuItem menuItem;
 
   @override
   Widget build(BuildContext context) {
@@ -45,24 +45,22 @@ class _CustomListTile extends StatelessWidget {
 
     return ListTile(
       leading: Icon(
-        appMenuItem.icon,
+        menuItem.icon,
         color: colors.primary,
       ),
       title: Text(
-        appMenuItem.title,
+        menuItem.title,
         style: TextStyle(color: colors.primary),
       ),
       subtitle: Text(
-        appMenuItem.subTitle,
+        menuItem.subTitle,
         style: TextStyle(color: colors.secondary),
       ),
       trailing: Icon(
         Icons.arrow_forward_ios_rounded,
         color: colors.primary,
       ),
-      onTap: () {
-        // TODO navegar a otras pantallas
-      },
+      onTap: () => Navigator.of(context).pushNamed(menuItem.link),
     );
   }
 }
