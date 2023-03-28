@@ -1,3 +1,4 @@
+export '/core/screens/theme/theme_screen.dart';
 export 'animated/animated_screen.dart';
 export 'app_tutorial/app_tutorial_screen.dart';
 export 'buttons/buttons_screen.dart';
