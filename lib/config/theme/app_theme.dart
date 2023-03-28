@@ -23,6 +23,15 @@ class AppTheme {
   final bool isDarkmode;
   final int selectedColor;
 
+  AppTheme copyWith({
+    bool? isDarkmode,
+    int? selectedColor,
+  }) =>
+      AppTheme(
+        selectedColor: selectedColor ?? this.selectedColor,
+        isDarkmode: isDarkmode ?? this.isDarkmode,
+      );
+
   ThemeData getTheme() => ThemeData(
       useMaterial3: true,
       brightness: isDarkmode ? Brightness.dark : Brightness.light,

@@ -19,7 +19,8 @@ class CounterScreen extends ConsumerWidget {
         title: const Text('Counter Screen'),
         actions: [
           IconButton(
-            onPressed: () => ref.read(isDarkmodeProvider.notifier).update((state) => !state),
+            // onPressed: () => ref.read(isDarkmodeProvider.notifier).update((state) => !state),
+            onPressed: () => ref.read(themeNotifierProvider.notifier).toggleDarkmode(),
             icon: Icon(isDarkmode ? Icons.dark_mode_outlined : Icons.light_mode_outlined),
           )
         ],
